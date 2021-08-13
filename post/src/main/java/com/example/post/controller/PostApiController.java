@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.post.dto.PostRequestDto;
+
 @RestController
 @RequestMapping("/api")
 public class PostApiController {
@@ -19,5 +21,10 @@ public class PostApiController {
 			
 		});
 		System.out.println("}");
+	}
+	
+	@PostMapping("/post/dto")
+	public void post(@RequestBody PostRequestDto requestData) {
+		System.out.println(requestData);
 	}
 }
