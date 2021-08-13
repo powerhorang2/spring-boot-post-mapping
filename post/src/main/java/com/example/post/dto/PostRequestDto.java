@@ -1,8 +1,5 @@
 package com.example.post.dto;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PostRequestDto {
@@ -89,10 +86,5 @@ public class PostRequestDto {
 	public String toString() {
 		return "PostRequestDto [account=" + account + ", email=" + email + ", address=" + address + ", password="
 				+ password + ", phoneNumber=" + phoneNumber + "]";
-	}
-	
-	@PostMapping("/post/dto")
-	public void post(@RequestBody PostRequestDto requestData) {
-		System.out.println(requestData);
 	}
 }
