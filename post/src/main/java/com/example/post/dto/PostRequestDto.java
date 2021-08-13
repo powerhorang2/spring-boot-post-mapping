@@ -12,6 +12,9 @@ public class PostRequestDto {
 	@JsonProperty("phone_number")
 	private String phoneNumber; // phone_number
 
+	@JsonProperty("OTP")
+	private String OTP;
+	
 	/**
 	 * @return the account
 	 */
@@ -82,9 +85,23 @@ public class PostRequestDto {
 		this.phoneNumber = phoneNumber;
 	}
 
+	/**
+	 * @return the oTP
+	 */
+	public String getOTP() {
+		return OTP;
+	}
+
+	/**
+	 * @param oTP the oTP to set
+	 */
+	public void setOTP(String oTP) {
+		OTP = oTP;
+	}
+
 	@Override
 	public String toString() {
 		return "PostRequestDto [account=" + account + ", email=" + email + ", address=" + address + ", password="
-				+ password + ", phoneNumber=" + phoneNumber + "]";
+				+ password + ", phoneNumber=" + phoneNumber + ", OTP=" + OTP + "]";
 	}
 }
